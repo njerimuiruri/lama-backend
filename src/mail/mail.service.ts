@@ -71,7 +71,7 @@ export class MailService {
                       </ul>
                       <!-- CTA -->
                       <div style="text-align:center;margin:32px 0;">
-                        <a href="http://localhost:3000"
+                        <a href="https://lama-arin-africa.org"
                            style="display:inline-block;background:#15803d;color:#ffffff;text-decoration:none;padding:14px 32px;border-radius:6px;font-weight:700;font-size:15px;">
                           Visit the Platform
                         </a>
