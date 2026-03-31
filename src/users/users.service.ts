@@ -1,6 +1,6 @@
 import { ConflictException, Injectable, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
-import { Model } from 'mongoose';
+import { Model, Types } from 'mongoose';
 import { GateUser, GateUserDocument } from './gate-user.schema';
 import { RegisterUserDto } from './dto/register-user.dto';
 
@@ -24,7 +24,19 @@ export class UsersService {
     return !!user;
   }
 
+  async findByEmail(email: string): Promise<GateUser | null> {
+    return this.gateUserModel.findOne({ email: email.toLowerCase() }).lean();
+  }
+
   async findAll(): Promise<GateUser[]> {
     return this.gateUserModel.find().sort({ createdAt: -1 }).lean();
+  }
+
+  async deleteById(id: string): Promise<void> {
+    if (!Types.ObjectId.isValid(id)) {
+      throw new NotFoundException('User not found.');
+    }
+    const result = await this.gateUserModel.deleteOne({ _id: new Types.ObjectId(id) });
+    if (result.deletedCount === 0) throw new NotFoundException('User not found.');
   }
 }
