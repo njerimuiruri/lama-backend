@@ -3,7 +3,7 @@ import { Document } from 'mongoose';
 
 export type NccapDocument = NccapRecord & Document;
 
-@Schema({ collection: 'nccap_indicators', strict: false, timestamps: false })
+@Schema({ collection: 'nccapindicators', strict: false, timestamps: false })
 export class NccapRecord {
   @Prop() PrioritySector: string;
   @Prop() PriorityAction: string;

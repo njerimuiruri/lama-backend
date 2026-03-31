@@ -3,7 +3,7 @@ import { Document } from 'mongoose';
 
 export type CcapDocument = CcapRecord & Document;
 
-@Schema({ collection: 'ccap_indicators', strict: false, timestamps: false })
+@Schema({ collection: 'ccapindicators', strict: false, timestamps: false })
 export class CcapRecord {
   @Prop() Source: string;
   @Prop() Activity: string;

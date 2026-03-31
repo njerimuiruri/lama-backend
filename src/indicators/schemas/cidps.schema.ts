@@ -3,7 +3,7 @@ import { Document } from 'mongoose';
 
 export type CidpsDocument = CidpsRecord & Document;
 
-@Schema({ collection: 'cidps_indicators', strict: false, timestamps: false })
+@Schema({ collection: 'cidpsindicators', strict: false, timestamps: false })
 export class CidpsRecord {
   @Prop() Source: string;
   @Prop() PrioritySector: string;

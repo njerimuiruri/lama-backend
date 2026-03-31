@@ -3,7 +3,7 @@ import { Document } from 'mongoose';
 
 export type LlaDocument = LlaRecord & Document;
 
-@Schema({ collection: 'lla_indicators', strict: false, timestamps: false })
+@Schema({ collection: 'llaindicators', strict: false, timestamps: false })
 export class LlaRecord {
   @Prop() thematicSector: string;
 }

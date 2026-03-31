@@ -3,7 +3,7 @@ import { Document } from 'mongoose';
 
 export type GgaDocument = GgaRecord & Document;
 
-@Schema({ collection: 'gga_indicators', strict: false, timestamps: false })
+@Schema({ collection: 'ggaindicators', strict: false, timestamps: false })
 export class GgaRecord {
   @Prop() Indicator: string;
 }

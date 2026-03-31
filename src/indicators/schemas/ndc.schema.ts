@@ -3,7 +3,7 @@ import { Document } from 'mongoose';
 
 export type NdcDocument = NdcIndicator & Document;
 
-@Schema({ collection: 'ndc_indicators', strict: false, timestamps: false })
+@Schema({ collection: 'ndcindicators', strict: false, timestamps: false })
 export class NdcIndicator {
   @Prop() Indicator: string;
   @Prop() Source: string;
