@@ -8,6 +8,7 @@ import { MailModule } from './mail/mail.module';
 import { IndicatorsModule } from './indicators/indicators.module';
 import { TrackingModule } from './tracking/tracking.module';
 import { DownloadModule } from './download/download.module';
+import { ContributionsModule } from './contributions/contributions.module';
 
 @Module({
   imports: [
@@ -31,6 +32,7 @@ import { DownloadModule } from './download/download.module';
     IndicatorsModule,
     TrackingModule,
     DownloadModule,
+    ContributionsModule,
   ],
 })
 export class AppModule {}
